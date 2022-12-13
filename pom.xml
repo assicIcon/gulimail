@@ -10,6 +10,7 @@
     <modules>
         <module>gateway</module>
         <module>pms</module>
+        <module>mms</module>
     </modules>
 
     <parent>
