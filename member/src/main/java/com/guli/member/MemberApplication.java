@@ -12,10 +12,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-public class MmsApplication {
+public class MemberApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MmsApplication.class, args);
+		SpringApplication.run(MemberApplication.class, args);
 	}
 
 }

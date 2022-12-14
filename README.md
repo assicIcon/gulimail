@@ -10,6 +10,7 @@ mall
 ├── product   产品服务
 ├── member    会员服务
 ├── order     订单服务
-└── warehouse 仓储服务
+├── warehouse 仓储服务
+└── marketing 营销服务
 
 ```
