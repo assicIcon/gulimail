@@ -1,6 +1,6 @@
-package com.guli.member.exception;
+package com.guli.product.exception;
 
-import com.common.exception.client.ClientException;
+import com.common.exception.client.*;
 import com.common.exception.server.ServerException;
 import com.common.exception.thirdparty.ThirdPartyException;
 import com.common.response.Response;
@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 
 /**
- * MmsExceptionAdvice
+ * ExceptionAdvice
  *
  * @author Runhu-Wu
  * @date 2022/12/12
  */
 @Slf4j
 @RestControllerAdvice
-public class MmsExceptionAdvice {
+public class ExceptionAdvice {
 
 	/**
 	 * 客户端异常

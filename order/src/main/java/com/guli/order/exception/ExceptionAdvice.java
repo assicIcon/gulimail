@@ -1,4 +1,4 @@
-package com.guli.marketing.exception;
+package com.guli.order.exception;
 
 import com.common.exception.client.ClientException;
 import com.common.exception.server.ServerException;
@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 
 /**
- * MarketingExceptionAdvice
+ * ExceptionAdvice
  *
  * @author Runhu-Wu
  * @date 2022/12/12
  */
 @Slf4j
 @RestControllerAdvice
-public class MarketingExceptionAdvice {
+public class ExceptionAdvice {
 
 	/**
 	 * 客户端异常
