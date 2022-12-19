@@ -52,7 +52,7 @@ create table member
     id           bigint unsigned auto_increment not null comment '自增ID' primary key,
     member_id    varchar(32) unique             not null comment '会员ID',
     level_id     varchar(32)                    not null comment '等级',
-    username     varchar(64)                    not null comment '用户名称',
+    username     varchar(64)                    not null comment '用户名',
     password     varchar(64)                    not null comment '密码',
     phone_number varchar(32)                    null comment '手机号',
     email        varchar(64)                    null comment '邮箱',
