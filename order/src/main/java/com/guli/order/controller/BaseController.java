@@ -59,7 +59,7 @@ public class BaseController implements ApplicationContextAware {
 	public <T> Response<Void> save(@PathVariable String function, @RequestBody Map<String, Object> body) {
 		ExampleSupportService<T> service = getService(function);
 		T entity = ReflectUtil.mapToObj(body, getEntityClass(service));
-		service.save(entity);
+		service.saveSelective(entity);
 		return ResponseBuilder.success();
 	}
 

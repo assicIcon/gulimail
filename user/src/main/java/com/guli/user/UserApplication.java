@@ -1,23 +1,21 @@
-package com.guli.product;
+package com.guli.user;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
- * PmsApplication
+ * com.guli.user.UserApplication
  *
  * @author Runhu-Wu
- * @date 2022/12/12
+ * @since 1.0
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-@MapperScan("com.guli.product.mapper")
-public class ProductApplication {
+public class UserApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProductApplication.class, args);
+		SpringApplication.run(UserApplication.class, args);
 	}
 
 }
