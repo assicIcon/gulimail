@@ -8,12 +8,12 @@ create table category
 (
     id                 bigint unsigned auto_increment not null comment '自增ID' primary key,
     category_id        varchar(32) unique             not null comment '分类ID',
-    parent_category_id varchar(32)                    null comment '父分类ID',
+    parent_category_id varchar(32) default ''         not null comment '父分类ID',
     category_name      varchar(64)                    not null comment '分类名称',
     measure_unit       varchar(16)                    null comment '计量单位',
     icon               varchar(128)                   null comment '图标',
-    valid_status       tinyint(4) default 1           not null comment '生效状态: 0-无效; 1-有效;',
-    sort               int        default 0           not null comment '排序',
+    valid_status       tinyint(4)  default 1          not null comment '生效状态: 0-无效; 1-有效;',
+    sort               int         default 0          not null comment '排序',
     description        varchar(256)                   null comment '描述',
     create_time        datetime                       not null comment '创建时间',
     update_time        datetime                       not null comment '修改时间'
@@ -139,7 +139,7 @@ create table product_spu_image
     spu_id        varchar(32)                    not null comment 'SPU_ID',
     image_name    varchar(64)                    null comment '图片名称',
     image_url     varchar(128)                   null comment '图片地址',
-    sort        int default 0                  not null comment '排序',
+    sort          int        default 0           not null comment '排序',
     default_image tinyint(4) default 0           not null comment '默认图片: 0-否; 1-是;',
     create_time   datetime                       not null comment '创建时间',
     update_time   datetime                       not null comment '修改时间'
@@ -187,8 +187,8 @@ create table product_sku_image
 (
     id          bigint unsigned auto_increment not null comment '自增ID' primary key,
     sku_id      varchar(32)                    not null comment 'SKU_ID',
-    image_name    varchar(64)                    null comment '图片名称',
-    image_url     varchar(128)                   null comment '图片地址',
+    image_name  varchar(64)                    null comment '图片名称',
+    image_url   varchar(128)                   null comment '图片地址',
     create_time datetime                       not null comment '创建时间',
     update_time datetime                       not null comment '修改时间'
 ) comment '产品SKU图片';

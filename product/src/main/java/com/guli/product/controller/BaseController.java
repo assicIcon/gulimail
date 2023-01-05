@@ -1,4 +1,4 @@
-package com.guli.marketing.controller;
+package com.guli.product.controller;
 
 import com.common.exception.client.ParameterException;
 import com.common.response.Response;
