@@ -1,0 +1,38 @@
+@startuml
+' 标题
+title 授权流程
+
+' 配置信息
+'让返回的消息展示在箭头的下面
+skinparam responseMessageBelowArrow true
+' 隐藏底部
+hide footbox
+' 主题
+!theme plain
+' 三角箭头
+skinparam style strictuml
+
+' 定义实体
+actor 用户 as user
+collections 网关服务 as gateway
+collections 认证服务 as auth
+collections 业务服务 as business
+
+user -> gateway ++ : 登录
+    gateway -> auth ++: 转发请求
+        auth -> auth  : 校验并生成TOKEN
+    gateway <-- auth -- : 返回TOKEN
+
+    gateway -> gateway : 保存TOKEN和用户信息
+
+user <-- gateway -- : 返回TOKEN
+
+... 用户发起其他业务请求 ...
+
+user -> gateway ++ : 业务请求(携带TOKEN)
+    gateway -> gateway : 校验token, 解析用户信息
+        gateway -> business ++ : 转发请求(携带用户信息)
+        gateway <-- business -- : 返回
+user <-- gateway -- : 返回
+
+@enduml

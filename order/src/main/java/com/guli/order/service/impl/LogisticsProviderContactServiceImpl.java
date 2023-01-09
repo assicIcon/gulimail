@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class LogisticsProviderContactServiceImpl extends ExampleSupportServiceImpl<LogisticsProviderContact> implements LogisticsProviderContactService {
 
-	protected LogisticsProviderContactServiceImpl(LogisticsProviderContactMapper mapper) {
+	public LogisticsProviderContactServiceImpl(LogisticsProviderContactMapper mapper) {
 		super(mapper);
 	}
 }
