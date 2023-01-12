@@ -33,8 +33,9 @@
         <openfeign.version>2.2.5.RELEASE</openfeign.version>
         <lombok.version>1.18.16</lombok.version>
         <mybatis.version>2.1.4</mybatis.version>
-        <alibaba-druid-version>1.1.10</alibaba-druid-version>
+        <alibaba.druid.version>1.1.10</alibaba.druid.version>
         <common.version>1.0-SNAPSHOT</common.version>
+        <log4j2.toolkit.version>6.4.0</log4j2.toolkit.version>
     </properties>
 
     <dependencyManagement>
@@ -81,7 +82,14 @@
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
-                <version>${alibaba-druid-version}</version>
+                <version>${alibaba.druid.version}</version>
+            </dependency>
+
+            <!-- skywalking log4j2 toolkit -->
+            <dependency>
+                <groupId>org.apache.skywalking</groupId>
+                <artifactId>apm-toolkit-log4j-2.x</artifactId>
+                <version>${log4j2.toolkit.version}</version>
             </dependency>
 
         </dependencies>

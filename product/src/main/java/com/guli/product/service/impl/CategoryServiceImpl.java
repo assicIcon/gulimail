@@ -5,6 +5,7 @@ import com.guli.product.entity.Category;
 import com.guli.product.mapper.CategoryMapper;
 import com.guli.product.service.CategoryService;
 import com.guli.product.vo.CategoryVo;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
@@ -17,6 +18,7 @@ import java.util.stream.Collectors;
  * @author Runhu-Wu
  * @since 1.0
  */
+@Slf4j
 @Service
 public class CategoryServiceImpl extends ExampleSupportServiceImpl<Category> implements CategoryService {
 

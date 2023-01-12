@@ -2,7 +2,7 @@
 <Configuration packages="org.apache.skywalking.apm.toolkit.log.log4j.v2.x">
 
     <properties>
-        <property name="file_path" value="/logs/mall/gateway" />
+        <property name="file_path" value="/logs/mall/product" />
         <property name="logger_pattern"
             value="%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight{%-5level} --- %traceId [%thread] %logger{35} : %msg%n"/>
     </properties>
@@ -45,7 +45,6 @@
             <DefaultRolloverStrategy max="15" />
         </RollingFile>
     </Appenders>
-
 
     <Loggers>
         <Root level="info">
