@@ -1,6 +1,6 @@
 package com.guli.product.service.impl;
 
-import com.common.service.impl.ExampleSupportServiceImpl;
+import com.common.service.impl.ServiceImpl;
 import com.guli.product.entity.Category;
 import com.guli.product.mapper.CategoryMapper;
 import com.guli.product.service.CategoryService;
@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
  */
 @Slf4j
 @Service
-public class CategoryServiceImpl extends ExampleSupportServiceImpl<Category> implements CategoryService {
+public class CategoryServiceImpl extends ServiceImpl<Category> implements CategoryService {
 
 	protected CategoryServiceImpl(CategoryMapper mapper) {
 		super(mapper);

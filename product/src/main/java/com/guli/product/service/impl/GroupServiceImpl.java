@@ -1,6 +1,6 @@
 package com.guli.product.service.impl;
 
-import com.common.service.impl.ExampleSupportServiceImpl;
+import com.common.service.impl.ServiceImpl;
 import com.guli.product.entity.Group;
 import com.guli.product.mapper.GroupMapper;
 import com.guli.product.service.GroupService;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
  * @since 1.0
  */
 @Service
-public class GroupServiceImpl extends ExampleSupportServiceImpl<Group> implements GroupService {
+public class GroupServiceImpl extends ServiceImpl<Group> implements GroupService {
 
 	protected GroupServiceImpl(GroupMapper mapper) {
 		super(mapper);

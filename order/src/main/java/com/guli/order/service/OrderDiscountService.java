@@ -1,6 +1,6 @@
 package com.guli.order.service;
 
-import com.common.service.ExampleSupportService;
+import com.common.service.Service;
 import com.guli.order.entity.OrderDiscount;
 
 /**
@@ -9,5 +9,5 @@ import com.guli.order.entity.OrderDiscount;
  * @author Runhu-Wu
  * @since 1.0
  */
-public interface OrderDiscountService extends ExampleSupportService<OrderDiscount> {
+public interface OrderDiscountService extends Service<OrderDiscount> {
 }

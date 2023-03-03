@@ -4,12 +4,12 @@
     <properties>
         <property name="file_path" value="/logs/mall/user" />
         <property name="logger_pattern"
-            value="%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight{%-5level} --- %traceId [%thread] %logger{35} : %msg%n"/>
+            value="%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight{%-5level} --- %traceId [%thread] %logger{35} : %msg%n" />
     </properties>
 
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="${logger_pattern}"/>
+            <PatternLayout pattern="${logger_pattern}" />
         </Console>
 
         <RollingFile name="RollingFileInfo" filename="${file_path}/info.log"

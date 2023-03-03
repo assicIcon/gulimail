@@ -1,10 +1,10 @@
 package com.guli.member.exception;
 
-import com.common.exception.client.ClientException;
-import com.common.exception.server.ServerException;
-import com.common.exception.thirdparty.ThirdPartyException;
-import com.common.response.Response;
-import com.common.response.ResponseBuilder;
+import com.common.core.exception.client.ClientException;
+import com.common.core.exception.server.ServerException;
+import com.common.core.exception.thirdparty.ThirdPartyException;
+import com.common.core.response.Response;
+import com.common.core.response.ResponseBuilder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

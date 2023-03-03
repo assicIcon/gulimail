@@ -1,7 +1,7 @@
 package com.guli.product.config;
 
-import com.common.response.ResponseHelper;
-import com.common.util.IoUtil;
+import com.common.core.response.ResponseHelper;
+import com.common.core.util.IoUtil;
 import feign.Feign;
 import feign.codec.Decoder;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;

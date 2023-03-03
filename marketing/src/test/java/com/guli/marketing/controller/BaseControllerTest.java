@@ -15,7 +15,7 @@ public class BaseControllerTest {
 
 	@Test
 	public void getEntityClassTest() {
-		System.out.println(((ParameterizedType)CouponServiceImpl.class.getGenericSuperclass()).getActualTypeArguments()[0]);
+		System.out.println(((ParameterizedType) CouponServiceImpl.class.getGenericSuperclass()).getActualTypeArguments()[0]);
 	}
 
 }

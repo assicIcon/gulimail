@@ -1,7 +1,6 @@
 package com.guli.order.service.impl;
 
-import com.common.service.ExampleSupportService;
-import com.common.service.impl.ExampleSupportServiceImpl;
+import com.common.service.impl.ServiceImpl;
 import com.guli.order.entity.OrderItemDiscount;
 import com.guli.order.mapper.OrderItemDiscountMapper;
 import com.guli.order.service.OrderItemDiscountService;
@@ -14,7 +13,7 @@ import org.springframework.stereotype.Service;
  * @since 1.0
  */
 @Service
-public class OrderItemDiscountServiceImpl extends ExampleSupportServiceImpl<OrderItemDiscount> implements OrderItemDiscountService {
+public class OrderItemDiscountServiceImpl extends ServiceImpl<OrderItemDiscount> implements OrderItemDiscountService {
 
 	protected OrderItemDiscountServiceImpl(OrderItemDiscountMapper mapper) {
 		super(mapper);

@@ -1,6 +1,6 @@
 package com.guli.product.service;
 
-import com.common.service.ExampleSupportService;
+import com.common.service.Service;
 import com.guli.product.entity.Brand;
 
 /**
@@ -9,5 +9,5 @@ import com.guli.product.entity.Brand;
  * @author Runhu-Wu
  * @since 1.0
  */
-public interface BrandService extends ExampleSupportService<Brand> {
+public interface BrandService extends Service<Brand> {
 }

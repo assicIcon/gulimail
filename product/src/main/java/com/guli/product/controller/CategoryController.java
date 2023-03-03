@@ -1,8 +1,7 @@
 package com.guli.product.controller;
 
-import com.common.response.Response;
-import com.common.response.ResponseBuilder;
-import com.guli.product.entity.Category;
+import com.common.core.response.Response;
+import com.common.core.response.ResponseBuilder;
 import com.guli.product.service.CategoryService;
 import com.guli.product.vo.CategoryVo;
 import org.springframework.web.bind.annotation.GetMapping;

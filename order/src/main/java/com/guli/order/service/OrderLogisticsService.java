@@ -1,6 +1,6 @@
 package com.guli.order.service;
 
-import com.common.service.ExampleSupportService;
+import com.common.service.Service;
 import com.guli.order.entity.OrderLogistics;
 
 /**
@@ -9,5 +9,5 @@ import com.guli.order.entity.OrderLogistics;
  * @author Runhu-Wu
  * @since 1.0
  */
-public interface OrderLogisticsService extends ExampleSupportService<OrderLogistics> {
+public interface OrderLogisticsService extends Service<OrderLogistics> {
 }

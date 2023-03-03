@@ -40,7 +40,9 @@ mall
 
 ![营销服务数据库表设计](marketing/doc/db/Marketing.png)
 
-### 网关服务 
+## 流程
+
+### 登录与鉴权流程
 
 ![登录与鉴权流程](gateway/doc/image/auth.png)
 

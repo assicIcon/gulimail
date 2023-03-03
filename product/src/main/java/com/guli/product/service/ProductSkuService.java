@@ -1,6 +1,6 @@
 package com.guli.product.service;
 
-import com.common.service.ExampleSupportService;
+import com.common.service.Service;
 import com.guli.product.entity.ProductSku;
 
 /**
@@ -9,5 +9,5 @@ import com.guli.product.entity.ProductSku;
  * @author Runhu-Wu
  * @since 1.0
  */
-public interface ProductSkuService extends ExampleSupportService<ProductSku> {
+public interface ProductSkuService extends Service<ProductSku> {
 }

@@ -1,6 +1,6 @@
 package com.guli.member.service;
 
-import com.common.service.ExampleSupportService;
+import com.common.service.Service;
 import com.guli.member.entity.Privilege;
 
 /**
@@ -9,5 +9,5 @@ import com.guli.member.entity.Privilege;
  * @author Runhu-Wu
  * @date 2022/12/20
  */
-public interface PrivilegeService extends ExampleSupportService<Privilege> {
+public interface PrivilegeService extends Service<Privilege> {
 }

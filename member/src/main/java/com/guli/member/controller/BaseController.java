@@ -1,11 +1,11 @@
 package com.guli.member.controller;
 
-import com.common.exception.client.ParameterException;
-import com.common.response.Response;
-import com.common.response.ResponseBuilder;
-import com.common.service.ExampleSupportService;
-import com.common.util.ReflectUtil;
-import com.common.util.StringUtil;
+import com.common.core.exception.client.ParameterException;
+import com.common.core.response.Response;
+import com.common.core.response.ResponseBuilder;
+import com.common.core.util.ReflectUtil;
+import com.common.core.util.StringUtil;
+import com.common.service.Service;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.ApplicationContext;
@@ -43,7 +43,7 @@ public class BaseController implements ApplicationContextAware {
 	 */
 	@GetMapping
 	public <T> Response<List<T>> listAll(@PathVariable String function) {
-		ExampleSupportService<T> service = getService(function);
+		Service<T> service = getService(function);
 		return ResponseBuilder.success(service.listAll());
 	}
 
@@ -57,7 +57,7 @@ public class BaseController implements ApplicationContextAware {
 	 */
 	@PostMapping
 	public <T> Response<Void> save(@PathVariable String function, @RequestBody Map<String, Object> body) {
-		ExampleSupportService<T> service = getService(function);
+		Service<T> service = getService(function);
 		T entity = ReflectUtil.mapToObj(body, getEntityClass(service));
 		service.saveSelective(entity);
 		return ResponseBuilder.success();
@@ -74,7 +74,7 @@ public class BaseController implements ApplicationContextAware {
 	 */
 	@PutMapping("/{id}")
 	public <T> Response<Void> update(@PathVariable String function, @PathVariable Long id, @RequestBody Map<String, Object> body) {
-		ExampleSupportService<T> service = getService(function);
+		Service<T> service = getService(function);
 		body.put("id", id);
 		T entity = ReflectUtil.mapToObj(body, getEntityClass(service));
 		service.updateByPrimaryKeySelective(entity);
@@ -90,7 +90,7 @@ public class BaseController implements ApplicationContextAware {
 	 */
 	@DeleteMapping("/{id}")
 	public Response<Void> delete(@PathVariable String function, @PathVariable Long id) {
-		ExampleSupportService<?> service = getService(function);
+		Service<?> service = getService(function);
 		service.removeByPrimaryKey(id);
 		return ResponseBuilder.success();
 	}
@@ -100,13 +100,13 @@ public class BaseController implements ApplicationContextAware {
 	 *
 	 * @param function 功能名称
 	 * @param <T>      实体对象类型
-	 * @return ExampleSupportService
+	 * @return Service
 	 */
 	@SuppressWarnings("unchecked")
-	private <T> ExampleSupportService<T> getService(String function) {
+	private <T> Service<T> getService(String function) {
 		String serviceName = StringUtil.underscoreToHump(function.replace("-", "_")) + "ServiceImpl";
 		try {
-			return applicationContext.getBean(serviceName, ExampleSupportService.class);
+			return applicationContext.getBean(serviceName, Service.class);
 		} catch (NoSuchBeanDefinitionException e) {
 			throw new ParameterException("path not support");
 		}
@@ -115,12 +115,12 @@ public class BaseController implements ApplicationContextAware {
 	/**
 	 * 根据Service获取对应的实体对象类型
 	 *
-	 * @param service ExampleSupportService
+	 * @param service Service
 	 * @param <T>     实体对象类型
 	 * @return 实体对象类型
 	 */
 	@SuppressWarnings("unchecked")
-	private <T> Class<T> getEntityClass(ExampleSupportService<T> service) {
+	private <T> Class<T> getEntityClass(Service<T> service) {
 		return (Class<T>) ((ParameterizedType) service.getClass().getGenericSuperclass()).getActualTypeArguments()[0];
 	}
 

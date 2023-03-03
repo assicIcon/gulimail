@@ -1,6 +1,6 @@
 package com.guli.user.service.impl;
 
-import com.common.service.impl.ExampleSupportServiceImpl;
+import com.common.service.impl.ServiceImpl;
 import com.guli.user.entity.User;
 import com.guli.user.mapper.UserMapper;
 import com.guli.user.service.UserService;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
  * @since 1.0
  */
 @Service
-public class UserServiceImpl extends ExampleSupportServiceImpl<User> implements UserService {
+public class UserServiceImpl extends ServiceImpl<User> implements UserService {
 
 	public UserServiceImpl(UserMapper mapper) {
 		super(mapper);

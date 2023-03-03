@@ -1,6 +1,6 @@
 package com.guli.product.service;
 
-import com.common.service.ExampleSupportService;
+import com.common.service.Service;
 import com.guli.product.entity.GroupAttr;
 
 /**
@@ -9,5 +9,5 @@ import com.guli.product.entity.GroupAttr;
  * @author Runhu-Wu
  * @since 1.0
  */
-public interface GroupAttrService extends ExampleSupportService<GroupAttr> {
+public interface GroupAttrService extends Service<GroupAttr> {
 }

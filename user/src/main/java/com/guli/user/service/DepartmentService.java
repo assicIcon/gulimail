@@ -1,6 +1,6 @@
 package com.guli.user.service;
 
-import com.common.service.ExampleSupportService;
+import com.common.service.Service;
 import com.guli.user.entity.Department;
 
 /**
@@ -9,5 +9,5 @@ import com.guli.user.entity.Department;
  * @author Runhu-Wu
  * @since 1.0
  */
-public interface DepartmentService extends ExampleSupportService<Department> {
+public interface DepartmentService extends Service<Department> {
 }

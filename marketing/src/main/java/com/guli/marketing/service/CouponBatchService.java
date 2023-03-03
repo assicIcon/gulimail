@@ -1,6 +1,6 @@
 package com.guli.marketing.service;
 
-import com.common.service.ExampleSupportService;
+import com.common.service.Service;
 import com.guli.marketing.entity.CouponBatch;
 
 /**
@@ -9,5 +9,5 @@ import com.guli.marketing.entity.CouponBatch;
  * @author Runhu-Wu
  * @date 2022/12/20
  */
-public interface CouponBatchService extends ExampleSupportService<CouponBatch> {
+public interface CouponBatchService extends Service<CouponBatch> {
 }
