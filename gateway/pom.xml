@@ -13,7 +13,7 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <gateway.version>2.0.0.RELEASE</gateway.version>
+        <gateway.version>3.0.0</gateway.version>
     </properties>
 
     <dependencies>
@@ -40,10 +40,10 @@
             <artifactId>apm-toolkit-log4j-2.x</artifactId>
         </dependency>
 
-        <!-- nacos-config -->
+        <!-- apollo-client-config-data -->
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <groupId>com.ctrip.framework.apollo</groupId>
+            <artifactId>apollo-client-config-data</artifactId>
         </dependency>
 
         <!-- nacos-discovery -->
@@ -57,6 +57,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
             <version>${gateway.version}</version>
+        </dependency>
+
+        <!-- loadbalancer -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
 
         <!-- redis -->

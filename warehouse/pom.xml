@@ -53,10 +53,10 @@
             <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
 
-        <!-- nacos-config -->
+        <!-- apollo-client-config-data -->
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <groupId>com.ctrip.framework.apollo</groupId>
+            <artifactId>apollo-client-config-data</artifactId>
         </dependency>
 
         <!-- nacos-discovery -->
