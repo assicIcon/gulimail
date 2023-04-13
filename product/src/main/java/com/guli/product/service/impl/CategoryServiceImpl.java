@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
@@ -36,7 +37,7 @@ public class CategoryServiceImpl extends ServiceImpl<Category> implements Catego
 	}
 
 	private void setChildren(CategoryVo categoryVo, List<CategoryVo> allCategoryVo) {
-		List<CategoryVo> children = allCategoryVo.stream().filter(e -> e.getParentCategoryId().equals(categoryVo.getCategoryId())).collect(Collectors.toList());
+		List<CategoryVo> children = allCategoryVo.stream().filter(e -> Objects.equals(e.getParentCategoryId(), categoryVo.getCategoryId())).collect(Collectors.toList());
 		children.forEach(c -> setChildren(c, allCategoryVo));
 		categoryVo.setChildren(children);
 	}

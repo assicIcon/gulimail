@@ -35,10 +35,12 @@
         </dependency>
 
         <!-- skywalking log4j2 toolkit -->
+<!--
         <dependency>
             <groupId>org.apache.skywalking</groupId>
             <artifactId>apm-toolkit-log4j-2.x</artifactId>
         </dependency>
+-->
 
         <!-- apollo-client-config-data -->
         <dependency>
@@ -50,6 +52,13 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <!-- 排除ribbon依赖 -->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- gateway -->
